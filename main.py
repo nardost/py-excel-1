@@ -2,11 +2,14 @@ import pandas as pd
 
 # get incident number from user
 incident = input("Enter incident number: ")
+
 # sql script formats
-insert = "INSERT INTO table_name (col1,col2)\n"
-select = "SELECT '{}','{}'"
+insert = "INSERT INTO table_name (City,Number)\n"
+select = "SELECT '{}','{}' from dual"
+
 # read the CSV file
 data = pd.read_csv("./data/HomeCity.csv")
+
 # iterate over the rows and construct the sql script
 for index, row in data.iterrows():
     if index != 0:
