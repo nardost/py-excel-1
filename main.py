@@ -15,7 +15,7 @@ insert = "INSERT INTO table_name (City,Number)\n"
 select = "SELECT '{}','{}' from dual"
 
 # read the CSV file
-data = pd.read_csv(f"./{data_location}/HomeCity.csv")
+data = pd.read_csv(f"{data_location}/HomeCity.csv")
 
 # iterate over the rows and construct the sql script
 for index, row in data.iterrows():
@@ -24,5 +24,5 @@ for index, row in data.iterrows():
     insert += select.format(row['City'], row['Number'])
 
 # save sql script to file
-with open(f"./{sql_location}/{incident}-insert.sql", "w") as file:
+with open(f"{sql_location}/{incident}-insert.sql", "w") as file:
     file.write(insert)

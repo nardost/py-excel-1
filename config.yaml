@@ -1,5 +1,5 @@
 app:
   name: "Experiments With Python and Excel"
 constants:
-  data_location: "data"
-  sql_location: "sql"
+  data_location: "./data"
+  sql_location: "./sql"
